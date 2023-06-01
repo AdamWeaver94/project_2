@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* preset for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* style for body */
+
+body {
+    background-color: rgb(206, 206, 206);
+    font-family: 'Press Start 2P', cursive;
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-weight: 400;
+    letter-spacing: 5px;
+    color: rgb(255, 0, 0);
+    font-size: xx-large;
+}
+
+nav {
+    height: 75px;
+    width: 100%;
+    display: flex;
+    margin-top: 5%;
+}
+
+.pixel_title {
+    line-height: 75px;
+    text-align: center;
+    margin: auto;
+}
+
+.matching_game {
+    height: 600px;
+    width: 600px;
+    margin: auto;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    perspective: 1000px;
+}
+
+/* style for cards */
+
+.card {
+    height: calc(30% - 10px);
+    width: calc(45% - 10px);
+    margin: 8px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform .3s;
+}
+
+/* card flip animation */
+
+.card.flip {
+    transform: rotateY('180deg');
+}
+
+.front_side,
+.rear_side {
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+    position: absolute;
+    border-radius: 7px;
+    background-color: rgb(221, 237, 251);
+}
