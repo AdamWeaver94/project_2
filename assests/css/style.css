@@ -55,12 +55,20 @@ nav {
     position: relative;
     transform-style: preserve-3d;
     transition: transform .3s;
+    transform: scale(1);
+}
+
+/* card animation on click */
+
+.card:active {
+    transform: scale(0.90);
+    transition: transform .3s;
 }
 
 /* card flip animation */
 
 .card.flip {
-    transform: rotateY('180deg');
+    transform: rotateY(180deg);
 }
 
 .front_side,
