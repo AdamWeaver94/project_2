@@ -10,8 +10,12 @@
 /* style for body */
 
 body {
-    background-color: rgb(206, 206, 206);
+    background-image: url(https://img.freepik.com/premium-vector/pixel-art-landscape-pine-forest-mountains-8-bit-vector-background_360488-709.jpg);
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
     font-family: 'Press Start 2P', cursive;
+    width: auto;
+    height: auto;
 }
 
 h1 {
