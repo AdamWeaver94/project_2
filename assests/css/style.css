@@ -39,11 +39,46 @@ nav {
     height: 600px;
     width: 600px;
     margin: auto;
+    margin-top: 25px;
     flex-wrap: wrap;
     display: flex;
     flex-direction: column;
     align-content: space-around;
     perspective: 1000px;
+}
+
+.inputs {
+    height: 125px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.feedback {
+    margin: auto;
+    text-align: center;
+}
+
+button {
+    background-color: rgb(255, 0, 0);
+    font-size: 15px;
+    color: aliceblue;
+    border-radius: 8px;
+    box-shadow: 0 7px 0px #AA0000;
+    display: inline-block;
+    transition: all .3s;
+    position: relative;
+    padding: 10px;
+    top: 0;
+    cursor: pointer;
+}
+
+button:active {
+    top: 3px;
+    box-shadow: 0 2px 0px #AA0000;
+    transition: all .3s;
 }
 
 /* style for cards */
@@ -56,6 +91,7 @@ nav {
     transform-style: preserve-3d;
     transition: transform .3s;
     transform: scale(1);
+    cursor: pointer;
 }
 
 /* card animation on click */

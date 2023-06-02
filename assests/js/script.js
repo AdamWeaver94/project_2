@@ -1,3 +1,8 @@
+// game set up
+
+
+
+
 // making card flip
 
 const cards = document.querySelectorAll('.card');
