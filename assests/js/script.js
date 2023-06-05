@@ -2,16 +2,18 @@
 
 const selectors = {
     moves: document.querySelector('.moves'),
-    timer: document.querySelector('.timer')
+    timer: document.querySelector('.timer'),
+    start: document.querySelector('button')
 }
 
 const state = {
+    gameStarted: false,
     totalFlips: 0,
     totalTime: 0,
     loop: null
 }
 
-// inital game js
+// inital game function
 
 const cards = document.querySelectorAll('.card');
 
