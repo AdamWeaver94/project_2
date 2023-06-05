@@ -1,4 +1,17 @@
-// making card flip
+// selectors for moves and timer
+
+const selectors = {
+    moves: document.querySelector('.moves'),
+    timer: document.querySelector('.timer')
+}
+
+const state = {
+    totalFlips: 0,
+    totalTime: 0,
+    loop: null
+}
+
+// inital game js
 
 const cards = document.querySelectorAll('.card');
 
@@ -22,6 +35,8 @@ function flipCard() {
 
     checkForMatch();
 }
+
+// matching card js
 
 function checkForMatch() {
     if (firstCard.dataset.framework === secondCard.dataset.framework) {
@@ -54,6 +69,8 @@ function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
 }
+
+// shuffle board function
 
 (function shuffle() {
     cards.forEach(card => {
