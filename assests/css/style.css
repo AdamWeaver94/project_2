@@ -51,7 +51,7 @@ nav {
     perspective: 1000px;
 }
 
-.inputs {
+.initial-startUp {
     height: 125px;
     width: fit-content;
     display: flex;
