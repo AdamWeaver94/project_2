@@ -19,10 +19,6 @@ startButton.addEventListener("click", () => {
 let seconds = 0,
     miutes = 0;
 
-// initial move counter
-let movesCount = 0,
-    winCount = 0;
-
 // for timer logic
 const timeGenerator = () => {
     seconds += 1;
@@ -36,6 +32,10 @@ const timeGenerator = () => {
     let minutesValue = minutes < 10 ? `0${minutes}` : minutes;
     timeValue.innerHTML = `<span>Time:</span>${minutesValue}:${secondsValue}`;
 };
+
+// initial move counter
+let movesCount = 0,
+    winCount = 0;
 
 // calculating moves
 const movesCounter = () => {
@@ -64,10 +64,12 @@ function flipCard() {
         return;
     }
 
+    movesCounter();
+
     secondCard = this;
 
     checkForMatch();
-}
+};
 
 // matching card
 
@@ -78,14 +80,14 @@ function checkForMatch() {
     }
 
     unflipCards();
-}
+};
 
 function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
 
     resetBoard();
-}
+};
 
 function unflipCards() {
     lockBoard = true;
@@ -96,12 +98,12 @@ function unflipCards() {
 
         resetBoard();
     }, 1500);
-}
+};
 
 function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
-}
+};
 
 // shuffle board function
 
