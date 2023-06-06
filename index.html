@@ -31,16 +31,18 @@
     <!-- controls and stats for game -->
 
     <div class="initial-startUp">
-        <button class="disabled" onclick="start">Start</button>
-        <div class="feedback">
-            <div class="timer">Time: 0 sec</div>
-            <div class="moves">0 moves</div>
-        </div>
+        <button class="start-button" id="start-button">Start</button>
+    </div>
+    </div>
+
+    <div class="moves-timer">
+        <div class="timer" id="timer"></div>
+        <div class="moves" id="moves"></div>
     </div>
 
     <!-- matching card game cards -->
 
-    <div class="matching_game">
+    <div class="matching_game" id="matching_game">
 
         <div class="card" data-framework="smiley-face">
             <img class="front_side" src="assests/images/smiley-face.png" alt="smiley-face">
