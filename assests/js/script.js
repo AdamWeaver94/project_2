@@ -6,7 +6,8 @@ const startButton = document.getElementById("start-button");
 const stopButton = document.getElementById("stop-button")
 const gameContainer = document.querySelector("matching_game");
 const controls = document.querySelector(".initial-startUp");
-const result = document.getElementById("results")
+const result = document.getElementById("results");
+const card = document.querySelector(".card");
 
 // start game
 startButton.addEventListener("click", () => {
@@ -37,7 +38,7 @@ stopButton.addEventListener(
 const initializer = () => {
     result.innerText = "";
     winCount = 0;
-    console.log(card);
+
 }
 
 // initial timer

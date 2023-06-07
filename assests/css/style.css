@@ -64,6 +64,40 @@ nav {
     perspective: 1000px;
 }
 
+#results {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: cornsilk;
+    background-color: rgb(255, 248, 220, 0.4)
+}
+
+.results-content {
+    background-color: rgb(199, 199, 199);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #656565;
+    width: 75%;
+}
+
+.close {
+    color: rgb(60, 60, 60);
+    float: right;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .initial-startUp {
     height: 125px;
     width: fit-content;
@@ -71,6 +105,16 @@ nav {
     flex-direction: column;
     justify-content: space-evenly;
     margin: auto;
+}
+
+.stop {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: auto;
+    margin-top: 11px;
+    margin-bottom: 20px;
 }
 
 .moves-timer {
@@ -111,7 +155,7 @@ button:active {
 
 /* stop button styling */
 #stop-button {
-    margin-left: 45%;
+    margin: auto;
 }
 
 /* style for cards */
