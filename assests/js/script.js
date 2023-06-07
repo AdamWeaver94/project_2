@@ -3,10 +3,8 @@
 const moves = document.getElementById("moves");
 const timeValue = document.getElementById("timer");
 const startButton = document.getElementById("start-button");
-const stopButton = document.getElementById("stop-button")
-const gameContainer = document.querySelector("matching_game");
 const controls = document.querySelector(".initial-startUp");
-const result = document.getElementById("results");
+const result = document.getElementById("results-content");
 const card = document.querySelector(".card");
 
 // start game
@@ -39,7 +37,7 @@ const initializer = () => {
     result.innerText = "";
     winCount = 0;
 
-}
+};
 
 // initial timer
 let seconds = 0,
@@ -78,7 +76,7 @@ let lockBoard = false;
 let firstCard, secondCard;
 
 function flipCard() {
-    if (lockBoard) return
+    if (lockBoard) return;
     if (this === firstCard) return;
 
     this.classList.add('flip');
@@ -102,7 +100,7 @@ function flipCard() {
         <h4>Moves: ${movesCount}</h4>`;
         stopGame();
     }
-};
+}
 
 // matching card
 
@@ -113,14 +111,14 @@ function checkForMatch() {
     }
 
     unflipCards();
-};
+}
 
 function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
 
     resetBoard();
-};
+}
 
 function unflipCards() {
     lockBoard = true;
@@ -131,12 +129,12 @@ function unflipCards() {
 
         resetBoard();
     }, 1500);
-};
+}
 
 function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
-};
+}
 
 // shuffle board function
 
@@ -144,7 +142,7 @@ function resetBoard() {
     cards.forEach(card => {
         let randomPos = Math.floor(Math.random() * 12);
         card.style.order = randomPos;
-    })
+    });
 })();
 
 cards.forEach(card => card.addEventListener('click', flipCard));
