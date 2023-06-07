@@ -3,17 +3,42 @@
 const moves = document.getElementById("moves");
 const timeValue = document.getElementById("timer");
 const startButton = document.getElementById("start-button");
+const stopButton = document.getElementById("stop-button")
 const gameContainer = document.querySelector("matching_game");
-const controls = document.querySelector("initial-startUp")
+const controls = document.querySelector(".initial-startUp");
+const result = document.getElementById("results")
 
 // start game
 startButton.addEventListener("click", () => {
     movesCount = 0;
     seconds = 0;
     minutes = 0;
+    controls.classList.add("hide");
+    startButton.classList.add("hide");
+    stopButton.classList.remove("hide");
     interval = setInterval(timeGenerator, 1000);
     moves.innerHTML = `<span>Moves:</span>${movesCount}`;
+    initializer();
 });
+
+// stop game
+
+stopButton.addEventListener(
+    "click",
+    (stopGame = () => {
+        controls.classList.remove("hide");
+        stopButton.classList.add("hide");
+        startButton.classList.remove("hide");
+        clearInterval(interval);
+    }));
+
+//initialise values
+
+const initializer = () => {
+    result.innerText = "";
+    winCount = 0;
+    console.log(card);
+}
 
 // initial timer
 let seconds = 0,
@@ -43,7 +68,6 @@ const movesCounter = () => {
     moves.innerHTML = `<span>Moves</span>${movesCount}`;
 };
 
-
 // flipping cards
 
 const cards = document.querySelectorAll('.card');
@@ -69,6 +93,14 @@ function flipCard() {
     secondCard = this;
 
     checkForMatch();
+
+    winCount += 1;
+
+    if (winCount == Math.floor(card.length / 6)) {
+        result.innerHTML = `<h2>You Won</h2>
+        <h4>Moves: ${movesCount}</h4>`;
+        stopGame();
+    }
 };
 
 // matching card
