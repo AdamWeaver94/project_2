@@ -3,6 +3,7 @@
 const moves = document.getElementById("moves");
 const timeValue = document.getElementById("timer");
 const startButton = document.getElementById("start-button");
+const stopButton = document.getElementById("stop-button")
 const controls = document.querySelector(".initial-startUp");
 const result = document.getElementById("results-content");
 const card = document.querySelector(".card");
