@@ -39,4 +39,4 @@ I tested out the performance of the desktop and mobile version to find any issue
 I used the code validator along the way to debug my code for any errors I may have encountered. I used the slack community to help with any issues as well. Also doing my own researched in the best ways to code.
 CodeInstitutes guides also helped when stuck with a code that I couldn't work out. 
 
-When using the javascript validator, it had flagged interval not being used. I have removed these to see where the fault is. I have used the it using the time function so cannot understand why this is functioning correctly. I will have to carry out further debugging after my deadline.
+When using the javascript validator, it had flagged interval not being used. I have removed these to see where the fault is. I have used the it using the time function so cannot understand why this is functioning correctly. this logic is necessary for the timer to work. I will have to debug this more after the deadline.
