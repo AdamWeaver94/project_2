@@ -61,7 +61,7 @@ I also have a results model that will allow the player to se there overall resul
 
 The website was deployed on Github pages. To deploy follow these steps.
 
-- In the [Github Repository](https://github.com/AdamWeaver94/project-1)
+- In the [Github Repository](https://github.com/AdamWeaver94/project_2)
 - Go to settings
 - From side menu, select pages and navigate to source drop down menu
 - Choose deploy from branch and select save
