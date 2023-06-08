@@ -26,19 +26,6 @@ h1 {
     font-size: xx-large;
 }
 
-#result {
-    text-align: center;
-}
-
-#result h2 {
-    font-size: 2.0em;
-}
-
-#result h4 {
-    font-size: 1.5em;
-    margin: 0.5em 0 1em 0;
-}
-
 nav {
     height: 75px;
     width: 100%;
@@ -52,7 +39,7 @@ nav {
     margin: auto;
 }
 
-.matching_game {
+.matching-game {
     height: 600px;
     width: 600px;
     margin: auto;
@@ -64,7 +51,9 @@ nav {
     perspective: 1000px;
 }
 
-#results {
+/* styling for results window */
+
+#results-modal {
     display: none;
     position: fixed;
     z-index: 1;
@@ -84,6 +73,15 @@ nav {
     width: 75%;
 }
 
+#result h2 {
+    font-size: 2.0em;
+}
+
+#result h4 {
+    font-size: 1.5em;
+    margin: 0.5em 0 1em 0;
+}
+
 .close {
     color: rgb(60, 60, 60);
     float: right;
@@ -97,6 +95,8 @@ nav {
     text-decoration: none;
     cursor: pointer;
 }
+
+/* styling for div with start button */
 
 .initial-startUp {
     height: 125px;
@@ -117,6 +117,8 @@ nav {
     margin-bottom: 20px;
 }
 
+/* styling for timer and moves counter */
+
 .moves-timer {
     margin: auto;
     text-align: center;
@@ -131,6 +133,8 @@ nav {
     font-size: large;
     text-align: center;
 }
+
+/* button styling */
 
 button {
     background-color: rgb(255, 0, 0);
@@ -184,8 +188,8 @@ button:active {
     transform: rotateY(180deg);
 }
 
-.front_side,
-.rear_side {
+.front-side,
+.rear-side {
     height: 100%;
     width: 100%;
     padding: 15px;
@@ -204,7 +208,7 @@ img {
     display: none;
 }
 
-.front_side {
+.front-side {
     transform: rotateY(180deg);
 }
 
@@ -217,7 +221,7 @@ img {
         display: flex;
     }
 
-    .matching_game {
+    .matching-game {
         width: 500px;
         margin: auto;
         display: flex;
@@ -234,7 +238,7 @@ img {
         display: flex;
     }
 
-    .matching_game {
+    .matching-game {
         width: 300px;
         height: 400px;
         margin: auto;
@@ -247,7 +251,6 @@ img {
         color: aliceblue;
         border-radius: 8px;
         box-shadow: 0 7px 0px #AA0000;
-        /* display: inline-block; */
         transition: all .3s;
         position: relative;
         padding: 1.5em 3em;
@@ -261,38 +264,40 @@ img {
         justify-content: space-evenly;
     }
 
-    @media screen and (max-width: 800px) {
+}
 
-        .initial-startUp {
-            width: fit-contents;
-            height: auto;
-            margin: auto;
-            display: flex;
-        }
+@media screen and (max-width: 800px) {
 
-        .matching_game {
-            width: 250px;
-            height: 300px;
-            margin: auto;
-            display: flex;
-        }
+    .initial-startUp {
+        width: fit-contents;
+        height: auto;
+        margin: auto;
+        display: flex;
+    }
 
-        button {
-            background-color: rgb(255, 0, 0);
-            font-size: 15px;
-            color: aliceblue;
-            border-radius: 8px;
-            box-shadow: 0 7px 0px #AA0000;
-            /* display: inline-block; */
-            transition: all .3s;
-            position: relative;
-            padding: 1.5em 3em;
-            top: 0;
-            cursor: pointer;
-            width: 70px;
-            display: flex;
-            text-align: center;
-            height: 65px;
-            margin-bottom: 35px;
-            justify-content: space-evenly;
-        }
+    .matching-game {
+        width: 250px;
+        height: 300px;
+        margin: auto;
+        display: flex;
+    }
+
+    button {
+        background-color: rgb(255, 0, 0);
+        font-size: 15px;
+        color: aliceblue;
+        border-radius: 8px;
+        box-shadow: 0 7px 0px #AA0000;
+        transition: all .3s;
+        position: relative;
+        padding: 1.5em 3em;
+        top: 0;
+        cursor: pointer;
+        width: 70px;
+        display: flex;
+        text-align: center;
+        height: 65px;
+        margin-bottom: 35px;
+        justify-content: space-evenly;
+    }
+}

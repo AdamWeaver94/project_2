@@ -1,15 +1,16 @@
-// game selectors for js
-
+// game selectors
 const moves = document.getElementById("moves");
 const timeValue = document.getElementById("timer");
 const startButton = document.getElementById("start-button");
-const stopButton = document.getElementById("stop-button")
+const stopButton = document.getElementById("stop-button");
 const controls = document.querySelector(".initial-startUp");
 const result = document.getElementById("results-content");
-const card = document.querySelector(".card");
+const resetAllCards = () => {
+    cards.forEach(card => card.classList.remove('flip'));
+};
 
-// start game
-startButton.addEventListener("click", () => {
+// start game functions
+const startGame = () => {
     movesCount = 0;
     seconds = 0;
     minutes = 0;
@@ -19,30 +20,23 @@ startButton.addEventListener("click", () => {
     interval = setInterval(timeGenerator, 1000);
     moves.innerHTML = `<span>Moves:</span>${movesCount}`;
     initializer();
-});
-
-// stop game
-
-stopButton.addEventListener(
-    "click",
-    (stopGame = () => {
-        controls.classList.remove("hide");
-        stopButton.classList.add("hide");
-        startButton.classList.remove("hide");
-        clearInterval(interval);
-    }));
-
-//initialise values
-
-const initializer = () => {
-    result.innerText = "";
-    winCount = 0;
-
+    resetBoard();
+    resetAllCards();
 };
 
-// initial timer
-let seconds = 0,
-    miutes = 0;
+// stop game function
+const stopGame = () => {
+    controls.classList.remove("hide");
+    stopButton.classList.add("hide");
+    startButton.classList.remove("hide");
+};
+
+//initialise values
+const initializer = () => {
+    result.innerText = "";
+    matchPairs = 0;
+
+};
 
 // for timer logic
 const timeGenerator = () => {
@@ -58,10 +52,6 @@ const timeGenerator = () => {
     timeValue.innerHTML = `<span>Time:</span>${minutesValue}:${secondsValue}`;
 };
 
-// initial move counter
-let movesCount = 0,
-    winCount = 0;
-
 // calculating moves
 const movesCounter = () => {
     movesCount += 1;
@@ -69,7 +59,6 @@ const movesCounter = () => {
 };
 
 // flipping cards
-
 const cards = document.querySelectorAll('.card');
 
 let hasFlippedCard = false;
@@ -94,20 +83,18 @@ function flipCard() {
 
     checkForMatch();
 
-    winCount += 1;
-
-    if (winCount == Math.floor(card.length / 6)) {
+    if (matchPairs == 6) {
         result.innerHTML = `<h2>You Won</h2>
-        <h4>Moves: ${movesCount}</h4>`;
+            <h4>Moves: ${movesCount}</h4>`;
         stopGame();
     }
 }
 
 // matching card
-
 function checkForMatch() {
     if (firstCard.dataset.framework === secondCard.dataset.framework) {
         disableCards();
+        matchPairs += 1;
         return;
     }
 
@@ -145,5 +132,27 @@ function resetBoard() {
         card.style.order = randomPos;
     });
 })();
+
+// initial timer
+let seconds = 0,
+    minutes = 0;
+
+// matching cards
+let matchPairs = 0;
+
+// initial move counter
+let movesCount = 0;
+
+// start button
+startButton.addEventListener(
+    "click",
+    startGame
+);
+
+//stop button
+stopButton.addEventListener(
+    "click",
+    stopGame
+);
 
 cards.forEach(card => card.addEventListener('click', flipCard));

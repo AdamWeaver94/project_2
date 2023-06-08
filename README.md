@@ -91,7 +91,7 @@ It could be interesting to change the theme of the levels while the player is pr
 
 # Testing
 
-Please refer to my [test.md](https://github.com/AdamWeaver94/project-1/blob/master/test.md).
+Please refer to my [test.md](https://github.com/AdamWeaver94/project_2/blob/main/test.md).
 
 # Acknowledgement
 
