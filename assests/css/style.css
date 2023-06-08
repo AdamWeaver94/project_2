@@ -236,9 +236,63 @@ img {
 
     .matching_game {
         width: 300px;
+        height: 400px;
         margin: auto;
         display: flex;
     }
-}
 
-@media screen and (max-width: 800px) {}
+    button {
+        background-color: rgb(255, 0, 0);
+        font-size: 15px;
+        color: aliceblue;
+        border-radius: 8px;
+        box-shadow: 0 7px 0px #AA0000;
+        /* display: inline-block; */
+        transition: all .3s;
+        position: relative;
+        padding: 1.5em 3em;
+        top: 0;
+        cursor: pointer;
+        width: 70px;
+        display: flex;
+        text-align: center;
+        height: 65px;
+        margin-bottom: 35px;
+        justify-content: space-evenly;
+    }
+
+    @media screen and (max-width: 800px) {
+
+        .initial-startUp {
+            width: fit-contents;
+            height: auto;
+            margin: auto;
+            display: flex;
+        }
+
+        .matching_game {
+            width: 250px;
+            height: 300px;
+            margin: auto;
+            display: flex;
+        }
+
+        button {
+            background-color: rgb(255, 0, 0);
+            font-size: 15px;
+            color: aliceblue;
+            border-radius: 8px;
+            box-shadow: 0 7px 0px #AA0000;
+            /* display: inline-block; */
+            transition: all .3s;
+            position: relative;
+            padding: 1.5em 3em;
+            top: 0;
+            cursor: pointer;
+            width: 70px;
+            display: flex;
+            text-align: center;
+            height: 65px;
+            margin-bottom: 35px;
+            justify-content: space-evenly;
+        }
