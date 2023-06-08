@@ -6,7 +6,8 @@ This game was built to get players to test there memory skill. I have styled the
  
 ## [View Game here](https://github.com/AdamWeaver94/project_2)
 
-## Game mock up on diferent platforms
+
+![screenshot](assests/docs/responsive.jpeg)
 
 ## Colour Palette
 | Color             | Hex                                                                |
@@ -24,6 +25,18 @@ I used Press Start 2P font style from [Google Fonts](https://fonts.google.com/sp
 
 I gave the game a background that is fitting witht the overall style. The image was found on google images but would, if had enough time, to create my own artwork.
 ![screenshot](https://img.freepik.com/premium-vector/pixel-art-landscape-pine-forest-mountains-8-bit-vector-background_360488-709.jpg)
+
+## Images
+
+All images were sourced from google images. I kept to the pixel style aspect to keep it within the look I was aiming for.
+
+![screenshot](assests/images/question-mark.png)
+![screenshot](assests/images/smiley-face.png)
+![screenshot](assests/images/puppy.jpeg)
+![screenshot](assests/images/pixel-money.avif)
+![screenshot](assests/images/mushroom-pixel.avif)
+![screenshot](assests/images/maple-leaf.png)
+![screenshot](assests/images/controller.png)
 
 ## Features
 
@@ -69,6 +82,12 @@ Refer to this link [here](https://github.com/AdamWeaver94/project_2/tree/main/as
 - (https://marina-ferreira.github.io/tutorials/js/memory-game/)
 - (https://webtips.dev/memory-game-in-javascript)
 - (https://www.w3schools.com/howto/howto_css_modals.asp)
+
+## Room for improvment?
+
+I would like to include more levels to the game, to make it more engaging for a user. This would come in stages and more matching cards could be introduced.
+Possibly a leaderboard could be added for users to keep track of there progress. This would require a player details entry and database to store scores.
+It could be interesting to change the theme of the levels while the player is progessing for a more imersive playthrough.
 
 # Testing
 
