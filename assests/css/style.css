@@ -207,3 +207,38 @@ img {
 .front_side {
     transform: rotateY(180deg);
 }
+
+@media screen and (max-width: 1200px) {
+
+    .initial-startUp {
+        width: fit-contents;
+        height: auto;
+        margin: auto;
+        display: flex;
+    }
+
+    .matching_game {
+        width: 500px;
+        margin: auto;
+        display: flex;
+    }
+
+}
+
+@media screen and (max-width: 950px) {
+
+    .initial-startUp {
+        width: fit-contents;
+        height: auto;
+        margin: auto;
+        display: flex;
+    }
+
+    .matching_game {
+        width: 300px;
+        margin: auto;
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 800px) {}
